@@ -1,0 +1,110 @@
+.topWrapper{
+    width: 30%;
+    margin: auto;
+    border: 3px solid green;
+    min-width: 30%;
+ } 
+.auth-header {
+    padding: 1.4rem 1.5rem 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  .auth-header-logo-img {
+    width: 100px;
+  }
+  .forgot-img .auth-header-logo-img {
+    width: 200px;
+  }
+  .auth-header-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 10px;
+    color: #212529;
+  }
+  .auth-header-subtitle {
+    font-size: 15px;
+    margin-bottom: 0;
+    color: #6c757d;
+  }
+  .forgot-subtitle {
+    margin-bottom: 10px;
+  }
+  .auth-body {
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  .input-field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .input-label {
+    display: flex;
+    color: #6c757d;
+  }
+  .input-control {
+    display: block;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #8e8e97;
+    padding: 0.25rem 0.67rem;
+    outline: none;
+    transition: border 0.1s ease-in, box-shadow 0.15s ease-in;
+  }
+  .input-control::placeholder {
+    transition: transform 0.1s ease-in;
+  }
+  .input-control:focus::placeholder {
+    transform: translateX(5px);
+  }
+  .input-control:focus,
+  .input-control:valid {
+    border: 2px solid #5960e6;
+  }
+  .link-end {
+    margin: 5px 0;
+    text-decoration: none;
+    color: #5960e6;
+  }
+  .link-end:hover {
+    color: #3e45ce;
+  }
+  .btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.35rem 1.24rem;
+    border-radius: 5px;
+    border: 1px solid #5960e6;
+    background: #5960e6;
+    color: #0e0101;
+    width: 100%;
+  }
+  .btn-submit:hover {
+    background: #3e45ce;
+  }
+  .flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .text-center {
+    text-align: center;
+    font-size: 15px;
+    color: #75757c;
+    margin: 15px 0;
+  }
+  .link-text-center {
+    text-decoration: none;
+    color: #5960e6;
+  }
+  .link-text-center:hover {
+    color: #3e45ce;
+  }
