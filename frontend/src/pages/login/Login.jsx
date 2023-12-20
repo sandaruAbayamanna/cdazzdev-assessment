@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const Login = () => {
   
 
@@ -15,6 +16,8 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  
+
   useEffect(()=>{
     const userInfo = localStorage.getItem("userInfo");
 
@@ -22,7 +25,7 @@ const Login = () => {
       //history.push('/')
       navigate('/')
     }
-  },[])
+  },[navigate])
 
 
   const submitHandler= async(e)=>{
@@ -41,6 +44,7 @@ const Login = () => {
       }
       setLoading(true)
 
+      //POST the login data to DB
       const {data} = await axios.post('http://localhost:5555/auth/login',
       {
         email,
@@ -50,8 +54,15 @@ const Login = () => {
       )
 
       console.log(data)
+
+      //set localStorage
       localStorage.setItem("userInfo", JSON.stringify(data))
       setLoading(false)
+
+      // Redirect to home page after successful login
+    navigate('/');
+
+    //dispatch(setUserInfo(email))
       
     } catch (error) {
        setError(error.response.data.message)

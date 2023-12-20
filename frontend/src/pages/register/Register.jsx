@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './register.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
@@ -10,6 +11,7 @@ const Register = () => {
   const[password, setPassword] =useState("")
   const[loading, setLoading] =useState(false)
 
+  const navigate = useNavigate();
 
   const submitHandler=async(e)=>{
 
@@ -37,6 +39,8 @@ const Register = () => {
 
       setLoading(false);
       localStorage.setItem("userInfo", JSON.stringify(data))
+
+      navigate('/');
       
     } catch (error) {
       console.log(error)
