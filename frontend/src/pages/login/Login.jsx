@@ -115,7 +115,7 @@ const Login = () => {
             />
           </div>
           <div className="flex-end">
-            <Link to={"/auth/forgot-password"} className="link-end">
+            <Link to={"#"} className="link-end">
               Forgot password?
             </Link>
           </div>
